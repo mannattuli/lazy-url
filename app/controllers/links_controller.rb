@@ -28,7 +28,7 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to "/", notice: "Shortened URL created at:" + " /x/" + @link.slug }
+        format.html { redirect_to "/", notice: "Shortened URL created at:" + " https://lazyurl.herokuapp.com/x/" + @link.slug }
         format.json { render :show, status: :created, location: @link }
       else
         format.html { render :new, status: :unprocessable_entity }
